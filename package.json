@@ -1,0 +1,11 @@
+{
+  "name": "crea-nuestra-cita",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PWA para una cita interactiva de pareja en un solo teléfono.",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/engine.test.mjs"
+  }
+}

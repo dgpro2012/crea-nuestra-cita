@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-419">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Crea nuestra cita ❤️</title>
+  <meta name="description" content="Una cita interactiva para dos, en un solo teléfono. Cinco niveles para conocerse, hablar y acercarse.">
+  <meta name="theme-color" content="#A75D49">
+  <meta name="color-scheme" content="light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Nuestra cita">
+  <meta name="referrer" content="no-referrer">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/fraunces-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="banner" class="banner" role="status" hidden></div>
+  <div id="net-pill" class="net-pill" hidden>Sin conexión · la cita sigue funcionando</div>
+  <main id="app" aria-live="polite">
+    <div class="loading" id="loading">
+      <span class="loading-heart" aria-hidden="true">❤</span>
+      <p>Preparando nuestra cita…</p>
+    </div>
+  </main>
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript><p class="fatal">Esta cita necesita JavaScript activado para funcionar.</p></noscript>
+
+  <script>
+    // Aviso si falta un recurso esencial (por ejemplo, si se abre sin conexión antes de la primera carga).
+    setTimeout(function () {
+      if (window.__citaReady) return;
+      var el = document.getElementById('loading');
+      if (!el) return;
+      el.innerHTML = '<p class="fatal"><b>No se pudo cargar la cita.</b><br>Falta algún archivo esencial. ' +
+        'Si es la primera vez que la abren, conéctense a internet una vez para prepararla. ' +
+        'Sus datos guardados no se han borrado.</p><button class="btn btn-primary" onclick="location.reload()">Reintentar</button>';
+    }, 6000);
+  </script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

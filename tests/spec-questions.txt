@@ -1,0 +1,583 @@
+# PROMPT MAESTRO — CREA NUESTRA CITA ❤️
+
+Actúa como un desarrollador senior full-stack, diseñador UX/UI especializado en experiencias móviles y experto en Progressive Web Apps (PWA), almacenamiento local y funcionamiento offline.
+
+Quiero que construyas una aplicación web REAL, funcional, bonita y lista para probar, que permita a una pareja vivir una cita interactiva en un único teléfono. No quiero únicamente una propuesta, un mockup ni una descripción: quiero el código y la aplicación funcionando.
+
+Si puedes crear archivos y ejecutar el proyecto, hazlo. Si necesitas elegir una tecnología, prioriza una solución sencilla, mantenible y compatible con una PWA instalable. No dependas de servicios externos para las funciones esenciales.
+
+Todo el contenido visible para los jugadores debe estar en español latinoamericano natural.
+
+# 1. CONCEPTO
+
+Crea una experiencia romántica para dos personas que quieren descubrir cuánto se conocen, hablar de temas profundos, fortalecer su conexión y explorar su intimidad.
+
+La experiencia debe evolucionar en cinco niveles:
+
+1. Lo cotidiano.
+2. ¿Cómo me ves?
+3. Lo emocional.
+4. Nuestra relación.
+5. Intimidad y deseo.
+
+La cita debe comenzar con preguntas ligeras y avanzar gradualmente hacia conversaciones más vulnerables y sensuales.
+
+Duración estimada: 45–60 minutos, aunque los jugadores pueden avanzar a su ritmo.
+
+No debe sentirse como una aplicación corporativa ni como un cuestionario genérico. Debe sentirse como una cita íntima, cuidada, cálida, divertida y personal.
+
+# 2. DISEÑO VISUAL
+
+Diseña una interfaz mobile-first, elegante y romántica.
+
+Paleta sugerida:
+- Terracota: #A75D49.
+- Arena: #F6EEE7.
+- Crema: #FFF9F4.
+- Marrón cálido: #70483D.
+- Rosa empolvado como acento.
+
+Usa tipografía moderna y legible, botones cómodos para tocar, bordes suaves, espacios generosos y animaciones discretas.
+
+Requisitos:
+- Sin sonidos.
+- Sin anuncios.
+- Sin cuentas ni registro por correo.
+- Sin dependencias de servidores para jugar.
+- Sin elementos innecesarios.
+- Buen contraste y textos fáciles de leer.
+- Transiciones suaves entre pantallas.
+- Diseño adaptable a teléfonos y tabletas.
+
+No sacrifiques funcionalidad por estética.
+
+# 3. PORTADA CON NUESTRA FOTO
+
+Utiliza la fotografía de pareja que adjunto como imagen principal de la portada.
+
+No inventes otra pareja ni sustituyas la fotografía por una imagen de stock. Conserva la fotografía original, su apariencia y su contenido. Puedes adaptar el recorte para que se vea bien en móvil.
+
+Texto principal:
+
+«Entre todas las personas del mundo, hoy volvemos a elegirnos».
+
+Subtítulo:
+
+«Cinco niveles para descubrir cuánto nos conocemos, atrevernos a hablar y acercarnos aún más».
+
+Botón principal:
+
+«Comenzar nuestra cita ❤️»
+
+La portada debe mostrar nuestra foto de forma protagonista, con un tratamiento visual cálido y elegante.
+
+La fotografía se debe almacenar localmente en el dispositivo cuando sea técnicamente posible, sin enviarla a servidores externos.
+
+# 4. REGISTRO DE LOS DOS JUGADORES
+
+Antes de comenzar la primera cita, muestra una pantalla para configurar ambos perfiles.
+
+Cada persona debe poder:
+
+- Escribir su nombre o apodo.
+- Subir una fotografía de perfil desde el dispositivo.
+- Ver una vista previa de su foto.
+- Cambiar el nombre o la fotografía antes de iniciar una nueva partida.
+
+Los campos deben ser fáciles de utilizar desde un teléfono.
+
+Los nombres y las fotos se mostrarán:
+- En la pantalla de selección de quién comienza.
+- Durante los turnos.
+- En los indicadores de puntuación.
+- En la pantalla final.
+
+Después de configurar los perfiles, mostrar la portada romántica.
+
+Si los perfiles ya están guardados, no pedir los datos de nuevo cada vez que se abra la aplicación.
+
+# 5. ELECCIÓN DE QUIÉN COMIENZA
+
+Después de pulsar «Comenzar nuestra cita», muestra:
+
+«¿Quién se atreve a empezar?»
+
+Presenta los dos perfiles con sus fotografías y nombres.
+
+Al seleccionar uno, ese jugador inicia el primer turno. Después, los turnos deben alternarse automáticamente durante el juego.
+
+La persona seleccionada debe quedar claramente identificada en pantalla.
+
+# 6. ESTRUCTURA DEL JUEGO
+
+El juego tiene cinco niveles de 20 preguntas cada uno.
+
+Cada nivel debe mostrar:
+- Nombre del nivel.
+- Número de pregunta actual.
+- Progreso visual.
+- Jugador al que corresponde el turno.
+- Puntuación actual de ambos.
+- Comodines restantes.
+- Acceso a las opciones para pasar una pregunta o avanzar de nivel.
+
+La navegación debe ser sencilla y no obligar a recorrer pantallas innecesarias.
+
+Cada pregunta aparece individualmente, no como una lista de 20 preguntas.
+
+## MECÁNICA DE LOS NIVELES 1 Y 2
+
+Estos niveles son juegos de adivinación.
+
+La aplicación NO conoce ni almacena las respuestas correctas. No hay respuestas precargadas ni una clave de respuestas.
+
+Funcionamiento:
+1. La aplicación muestra una pregunta sobre la persona que tiene el turno.
+2. Esa persona lee la pregunta en voz alta.
+3. Su pareja intenta adivinar la respuesta.
+4. La persona sobre la que trata la pregunta evalúa la respuesta.
+5. Aparecen dos botones: «Acertó» y «Falló».
+6. Si pulsa «Acertó», se suman los puntos correspondientes a quien adivinó.
+7. Si pulsa «Falló», nadie recibe puntos.
+8. Se cambia al siguiente turno.
+
+La persona que evalúa debe poder registrar el resultado manualmente. No implementes reconocimiento de respuestas ni corrección automática.
+
+## MECÁNICA DE LOS NIVELES 3, 4 Y 5
+
+En estos niveles, cada persona responde directamente sobre sí misma.
+
+La aplicación muestra la pregunta dirigida a la persona del turno.
+
+No existen respuestas correctas o incorrectas.
+
+Cuando termina de responder, pulsa:
+
+«He respondido».
+
+En ese momento se asignan los puntos del nivel.
+
+También debe aparecer:
+
+«Pasar pregunta».
+
+Pasar una pregunta:
+- No resta puntos.
+- No consume un comodín.
+- No exige explicar el motivo.
+- No debe generar mensajes de culpa o presión.
+
+Si alguien pasa una pregunta, no recibe puntos por ella.
+
+## REGLA DE ALTERNANCIA
+
+Mantén una alternancia clara entre los dos jugadores.
+
+En los niveles 1 y 2, cada turno consiste en adivinar la respuesta del otro.
+
+En los niveles 3, 4 y 5, cada turno consiste en responder sobre uno mismo.
+
+La interfaz debe indicar claramente quién habla, quién adivina y quién evalúa cuando corresponda.
+
+# 7. PUNTUACIÓN
+
+La puntuación por respuesta correcta o completada es:
+
+- Nivel 1: 1 punto.
+- Nivel 2: 2 puntos.
+- Nivel 3: 3 puntos.
+- Nivel 4: 4 puntos.
+- Nivel 5: 5 puntos.
+
+En los niveles 1 y 2, únicamente se otorgan puntos si la persona que evalúa marca «Acertó».
+
+En los niveles 3, 4 y 5, se otorgan puntos cuando la persona pulsa «He respondido».
+
+Las preguntas omitidas no otorgan puntos.
+
+No restes puntos por fallar, pasar una pregunta o usar un comodín.
+
+El marcador debe actualizarse inmediatamente y conservarse al cerrar la aplicación.
+
+# 8. COMODINES
+
+Hay tres comodines compartidos por toda la cita.
+
+Cada comodín permite cambiar la pregunta actual por otra del mismo nivel.
+
+Reglas:
+- Máximo tres usos durante toda la partida.
+- El contador debe ser visible.
+- El comodín se consume al confirmar el cambio.
+- No se puede recuperar un comodín gastado.
+- No se puede generar una pregunta fuera del nivel actual.
+- Si no hay preguntas alternativas disponibles, informa al usuario y no consumas el comodín.
+
+Implementa las preguntas como datos estructurados para poder controlar cuáles ya se han mostrado.
+
+«Pasar pregunta» debe estar disponible sin consumir comodines.
+
+# 9. AVANCE ENTRE NIVELES
+
+Cada nivel contiene 20 preguntas.
+
+Cuando se completan las 20 preguntas, la aplicación avanza automáticamente al siguiente nivel.
+
+También debe existir un botón:
+
+«Avanzar al siguiente nivel».
+
+Los jugadores pueden utilizarlo antes de completar las 20 preguntas.
+
+Si avanzan anticipadamente:
+- No se asignan puntos por preguntas que no hayan respondido.
+- No se inventan respuestas.
+- No se alteran los puntos ya obtenidos.
+- Las preguntas pendientes quedan sin puntuación.
+
+Antes de pasar de nivel anticipadamente, solicita confirmación para evitar pulsaciones accidentales.
+
+Al entrar en cada nivel, muestra su nombre y una introducción breve.
+
+# 10. LOS CINCO NIVELES Y SUS PREGUNTAS
+
+Utiliza exactamente las siguientes preguntas. No las reescribas, sustituyas ni reduzcas. No inventes preguntas nuevas para completar la lista.
+
+## NIVEL 1 — LO COTIDIANO
+
+Valor: 1 punto por acierto.
+
+1. ¿Cuál es mi color favorito?
+2. ¿Cuál es mi comida favorita?
+3. ¿Cuál es mi mayor fobia o miedo?
+4. ¿Cuál es mi animal favorito?
+5. ¿Cuál es mi libro favorito?
+6. ¿Quién es mi cantante o artista musical favorito?
+7. ¿Cuál es mi película favorita?
+8. ¿Cuál es mi serie favorita?
+9. ¿Cuál es mi canción favorita?
+10. ¿Cuál es mi postre favorito?
+11. ¿Qué comida no me gusta para nada?
+12. ¿Qué es lo que menos soporto en una persona?
+13. ¿Cuál es mi bebida favorita?
+14. ¿Prefiero la playa, la montaña o la ciudad?
+15. ¿Cuál es mi estación del año o tipo de clima favorito?
+16. ¿Soy más de madrugar o de trasnochar?
+17. ¿Qué es lo primero que suelo hacer al despertarme?
+18. ¿Qué actividad disfruto hacer en mi tiempo libre?
+19. ¿Qué cosa me pone de mal humor rápidamente?
+20. Si pudiera comprarme cualquier cosa ahora mismo, ¿qué elegiría?
+
+## NIVEL 2 — ¿CÓMO ME VES?
+
+Valor: 2 puntos por acierto.
+
+1. ¿Qué es lo que más me gusta de ti?
+2. ¿Qué es lo que más me enoja de ti?
+3. Si pudiera cambiar una sola cosa de ti, ¿qué cambiaría?
+4. ¿Cuáles son las tres cosas que más me gustan de ti?
+5. ¿Qué fue lo que me enamoró de ti?
+6. ¿Cuál creo que es tu mayor virtud?
+7. ¿Qué característica tuya me parece más atractiva?
+8. ¿Qué creo que te hace diferente de las demás personas?
+9. ¿Qué comportamiento tuyo me cuesta más entender?
+10. ¿Qué es lo que más admiro de ti?
+11. ¿Qué creo que es lo más difícil de estar en una relación conmigo?
+12. ¿Qué crees que considero tu mayor defecto?
+13. ¿En qué situación creo que eres más difícil de tratar?
+14. ¿Qué cosa haces que consigue sacarme una sonrisa incluso cuando estoy de mal humor?
+15. ¿Qué creo que es lo que mejor haces como pareja?
+16. ¿Qué aspecto de tu personalidad creo que pocas personas conocen de verdad?
+17. ¿Qué creo que podrías mejorar para que nuestra relación funcione todavía mejor?
+18. ¿Qué es lo que más miedo me daría perder de nuestra relación?
+19. ¿Qué creo que nos hace funcionar bien como pareja?
+20. Si tuviera que describirte con tres palabras, ¿cuáles elegiría?
+
+## NIVEL 3 — LO EMOCIONAL
+
+Valor: 3 puntos por respuesta completada.
+
+Al comenzar, mostrar exactamente esta introducción:
+
+«Aquí no existen respuestas correctas. El punto se asigna cuando termines de responder. Puedes pasar cualquier pregunta sin explicaciones ni penalización».
+
+Preguntas:
+
+1. ¿Qué es lo que más me preocupa de mi vida actualmente, pero casi nunca digo en voz alta?
+2. ¿Cuál es mi inseguridad más grande y cómo afecta la forma en que me relaciono con los demás?
+3. Cuando estoy triste y siento que no puedo más, ¿qué necesito de mi pareja para sentirme verdaderamente acompañado/a?
+4. ¿Qué emoción me cuesta más expresar y qué temo que pase si dejo que los demás la vean?
+5. ¿Cuál es uno de mis miedos más profundos, ese que intento esconder incluso de las personas que más quiero?
+6. ¿Qué palabras, actitudes o comentarios pueden herirme profundamente porque tocan una inseguridad que llevo dentro?
+7. Cuando alguien me hace daño, ¿suelo hablarlo, alejarme, fingir que no me importa o guardármelo? ¿Qué hay detrás de mi reacción?
+8. ¿Cuál es mi lenguaje del amor y qué necesito recibir para sentirme verdaderamente amado/a, más allá de las palabras?
+9. ¿Cuándo fue la primera vez que sentí que me rompieron el corazón durante mi infancia y cómo creo que esa experiencia me marcó?
+10. ¿Qué aspecto de mí mismo/a intento ocultar por miedo a que, si los demás lo conocieran, dejaran de quererme o admirarme?
+11. ¿Tengo miedo al rechazo? ¿De qué manera influye ese miedo en las decisiones que tomo, en mis relaciones o en la forma en que me muestro ante los demás?
+12. ¿Qué es lo que más vergüenza me da de mí mismo/a y qué creo que los demás pensarían si lo supieran?
+13. ¿Qué necesito de mi pareja para sentirme emocionalmente seguro/a y poder mostrarme tal como soy, sin miedo a ser juzgado/a?
+14. ¿Qué es algo que todavía no me he perdonado y por qué sigo siendo tan duro/a conmigo mismo/a por ello?
+15. ¿Qué hago realmente para sobrellevarlo cuando siento que todo me supera y qué me gustaría poder hacer en lugar de eso?
+16. ¿Qué parte de mi personalidad creo que desarrollé para protegerme del dolor, aunque hoy esa misma parte pueda dificultar mis relaciones?
+17. ¿Qué experiencia de mi infancia creo que todavía influye en mi forma de amar, confiar o reaccionar cuando alguien me importa?
+18. ¿Qué me duele más: sentir que he decepcionado a alguien que amo o descubrir que alguien a quien amo me ha decepcionado? ¿Qué dice eso sobre mí?
+19. Cuando siento que alguien importante se está alejando de mí, ¿qué es lo primero que pienso y cómo suelo actuar por miedo a perderlo?
+20. ¿Qué sueño o deseo personal he dejado de lado y qué me ha impedido luchar por él?
+
+No interpretes las respuestas, no diagnostiques a los jugadores ni les digas qué significan sus emociones.
+
+## NIVEL 4 — NUESTRA RELACIÓN
+
+Valor: 4 puntos por respuesta completada.
+
+Al comenzar, mostrar exactamente esta introducción:
+
+«Míranos con honestidad. Este nivel es una oportunidad para hablar de nosotros sin convertir la conversación en una discusión. No tienes que proteger la relación ocultando lo que sientes, pero tampoco necesitas herir para decir la verdad. Escucha para comprender, no para defenderte. Pueden sentir cosas diferentes y ambas perspectivas merecen ser escuchadas».
+
+Preguntas:
+
+1. ¿Qué es lo que más miedo me da perder de nuestra relación y por qué es tan importante para mí?
+2. ¿Qué situaciones despiertan mis celos y qué miedo se esconde realmente detrás de ellos?
+3. ¿Alguna vez he sentido que tengo que competir con alguien o algo para recibir la atención de mi pareja? ¿Qué me hizo sentir así?
+4. ¿Qué tendría que pasar para que perdiera la confianza en mi pareja y sintiera que ya no puedo recuperarla?
+5. ¿Qué significa para mí ser infiel, más allá de tener relaciones sexuales con otra persona?
+6. ¿Hay algo que me dé miedo contarle a mi pareja porque temo que cambie la forma en que me ve o me quiera?
+7. ¿Qué necesita hacer mi pareja para que yo me sienta seguro/a de que realmente me elige, incluso cuando estamos pasando por un mal momento?
+8. ¿Qué límite personal jamás quisiera tener que sacrificar para mantener nuestra relación?
+9. ¿En qué situaciones siento que mi pareja invade mi espacio, limita mi libertad o no respeta suficientemente mis decisiones?
+10. ¿Qué cosas me cuesta tolerar por miedo a que, si expreso lo que necesito, mi pareja se aleje de mí?
+11. ¿Alguna vez he dudado del amor de mi pareja, aunque no se lo haya dicho? ¿Qué provocó esa duda?
+12. ¿Qué comportamiento de mi pareja podría hacerme sentir reemplazable o poco importante dentro de nuestra relación?
+13. ¿Qué me cuesta más: confiar plenamente en mi pareja o creer que soy suficiente para que me siga eligiendo? ¿Por qué?
+14. ¿Qué considero una falta de respeto dentro de una relación, aunque otras personas puedan verlo como algo normal?
+15. Cuando tengo miedo de perder a mi pareja, ¿cómo cambia mi manera de actuar con ella?
+16. ¿Hay alguna experiencia de una relación anterior o de mi infancia que todavía influya en mi capacidad de confiar en mi pareja actual?
+17. ¿Qué necesitaría de mi pareja para poder hablar de mis inseguridades sin sentir que me estoy exponiendo demasiado?
+18. ¿Qué situación podría hacerme quedarme en una relación en la que ya no me siento feliz, por miedo a estar solo/a o empezar de nuevo?
+19. ¿Qué verdad sobre nuestra relación me daría miedo escuchar de mi pareja, aunque una parte de mí necesite conocerla?
+20. ¿Qué tendría que sentir, recibir y vivir dentro de nuestra relación para poder amar sin estar constantemente protegiéndome del dolor?
+
+## NIVEL 5 — INTIMIDAD Y DESEO
+
+Valor: 5 puntos por respuesta completada.
+
+Al comenzar, mostrar exactamente esta introducción:
+
+«Atrévete a decir lo que deseas. Aquí puedes hablar de sexo, fantasías, placer y curiosidades sin vergüenza. No tienes que fingir que algo te gusta ni aceptar algo que no deseas. Una fantasía se puede compartir sin tener que cumplirla. La curiosidad se puede explorar sin presión».
+
+Preguntas:
+
+1. ¿Qué es lo que más me excita físicamente de mi pareja y qué tiene eso que me provoca tanto deseo?
+2. ¿Qué tipo de iniciativa sexual me gustaría que mi pareja tomara más a menudo conmigo?
+3. ¿Prefiero ser quien seduce y toma la iniciativa o que mi pareja me sorprenda? ¿Qué me gusta de ese papel?
+4. ¿Qué tipo de beso, caricia o contacto consigue despertar mi deseo más rápidamente?
+5. ¿Qué me gustaría que mi pareja me dijera al oído durante un momento íntimo para excitarme?
+6. ¿Qué fantasía sexual me da curiosidad explorar con mi pareja, aunque todavía no me haya atrevido a proponerla?
+7. ¿Hay alguna práctica sexual que me intrigue y sobre la que me gustaría hablar con mi pareja para descubrir si también le interesa?
+8. ¿Qué situación, lugar o ambiente me parece especialmente excitante para tener intimidad?
+9. ¿Qué parte de mi cuerpo me encanta que mi pareja toque o bese y me gustaría que explorara más?
+10. ¿Qué deseo sexual me cuesta pedir por vergüenza o por miedo a que mi pareja me juzgue?
+11. ¿Qué me gusta más: una seducción lenta que aumente la tensión o un acercamiento directo y apasionado? ¿Por qué?
+12. ¿Qué podría hacer mi pareja para sorprenderme sexualmente de una manera que realmente disfrute?
+13. ¿Qué me ayuda a disfrutar más del sexo: sentir conexión emocional, tener tiempo para explorar, recibir caricias, hablar de lo que me gusta u otra cosa?
+14. ¿Qué me gustaría que mi pareja entendiera mejor sobre mi placer y sobre lo que necesito para disfrutar plenamente?
+15. ¿Hay algo que hayamos hecho sexualmente y que me gustaría repetir, cambiar o explorar de una manera diferente?
+16. ¿Qué tipo de juego de seducción entre nosotros me gustaría probar: provocarnos durante el día, enviarnos mensajes sugerentes, preparar una cita sensual u otra idea?
+17. ¿Qué me resulta más excitante de sentirme deseado/a: que mi pareja me lo diga, que tome la iniciativa, que me mire de cierta manera o que me lo demuestre con su contacto?
+18. ¿Qué límite sexual es importante para mí y cómo me gustaría comunicarlo para sentirme respetado/a y disfrutar con confianza?
+19. ¿Si supiera que mi pareja me escuchará sin juzgarme, qué conversación sobre sexo, placer o fantasías me gustaría tener con ella?
+20. Si pudiéramos dedicar una noche exclusivamente a descubrir el placer del otro, sin prisas, expectativas ni obligación de llegar a ningún resultado, ¿qué me gustaría proponer?
+
+# 11. CATÁLOGO FINAL DE PREMIOS
+
+Al terminar todos los niveles, presenta el marcador final y anuncia al ganador.
+
+El ganador elige uno de los siguientes cuatro premios para su pareja.
+
+No crees más premios ni muestres un catálogo de veinte opciones. Solo deben existir estas cuatro opciones:
+
+## Premio 1 — Romántico: Una carta de amor
+
+Tu pareja te escribe una carta con tres cosas que ama de ti y algo que desea vivir contigo.
+
+## Premio 2 — Divertido: Tu deseo es mi orden
+
+El ganador elige una actividad divertida para hacer juntos, como bailar una canción, recrear una escena romántica o hacer un reto de imitaciones.
+
+## Premio 3 — Sensual: Quince minutos para ti
+
+Tu pareja te dedica 15 minutos de caricias o un masaje relajante, adaptados a lo que te resulte agradable.
+
+## Premio 4 — Íntimo: Tu fantasía compartida
+
+El ganador elige una fantasía o deseo para conversar y, si ambos quieren, explorar juntos sin presiones.
+
+Reglas:
+- El ganador elige el premio para su pareja.
+- Ambos deben sentirse cómodos con la experiencia.
+- Cualquiera puede rechazar una propuesta o elegir una alternativa sin penalización.
+- Ningún premio implica obligación sexual.
+- No conviertas los premios en tareas forzosas.
+- La aplicación debe mantener un tono divertido y romántico, no moralista.
+
+# 12. PANTALLA FINAL Y DESEMPATE
+
+Al completar la cita, muestra:
+
+- Una felicitación cálida.
+- Los nombres y fotos de ambos jugadores.
+- La puntuación final.
+- El ganador, si lo hay.
+- El botón para elegir el premio.
+- Una opción para iniciar una nueva cita.
+
+Ejemplo de título:
+
+«¡Llegaron al final! ❤️»
+
+Subtítulo:
+
+«Cinco niveles, muchas confesiones y una cita para recordar».
+
+Si hay empate, inicia una pregunta especial de desempate.
+
+Para el desempate:
+- Utiliza una pregunta de conocimiento sobre la pareja que permita identificar una respuesta concreta.
+- La persona sobre la que trata la pregunta conoce la respuesta y evalúa el intento.
+- Si el intento es correcto, gana quien adivinó.
+- Si falla, la otra persona puede intentarlo.
+- Si no se puede establecer una respuesta clara o ambos fallan, presenta otra pregunta de desempate.
+- No alteres la puntuación principal para resolver el empate.
+
+El premio sigue siendo elegido por el ganador para su pareja.
+
+# 13. GUARDADO AUTOMÁTICO Y PRIVACIDAD
+
+La aplicación debe guardar automáticamente:
+- Nombres de los jugadores.
+- Fotografías de perfil.
+- Fotografía de portada seleccionada.
+- Nivel actual.
+- Pregunta actual.
+- Turno actual.
+- Puntos de cada jugador.
+- Preguntas ya utilizadas.
+- Comodines restantes.
+- Resultados de las preguntas.
+- Estado de la partida.
+
+Si se cierra el navegador, se recarga la página o se pierde la batería, la aplicación debe poder recuperar la partida desde el mismo dispositivo.
+
+Cuando se vuelva a abrir, mostrar:
+
+- «Continuar nuestra cita ❤️».
+- «Empezar una nueva cita».
+
+La opción de comenzar una nueva cita debe solicitar confirmación antes de borrar la partida guardada.
+
+No borres el progreso de forma accidental.
+
+Utiliza almacenamiento local persistente apropiado. Debido a que hay fotografías, prioriza IndexedDB para las imágenes y los datos que lo requieran; puedes usar localStorage para preferencias pequeñas.
+
+No envíes nombres, fotos, respuestas ni puntuaciones a servidores externos.
+
+Incluye una opción discreta para borrar los datos guardados, con confirmación explícita.
+
+# 14. PWA Y FUNCIONAMIENTO OFFLINE
+
+Esta aplicación debe ser una PWA instalable y funcionar sin conexión después de su primera carga y preparación.
+
+Implementa:
+- Manifest válido.
+- Service worker.
+- Caché de los recursos necesarios.
+- Archivos locales para estilos, scripts, iconos y tipografías cuando sea posible.
+- Navegación funcional sin conexión.
+- Persistencia del progreso.
+- Tratamiento de errores si el almacenamiento falla.
+- Una interfaz que informe si falta algún recurso esencial.
+
+No dependas de APIs externas para mostrar preguntas, sumar puntos, alternar turnos, cargar perfiles, elegir premios o recuperar el progreso.
+
+La fotografía de portada debe quedar guardada en el dispositivo para que no desaparezca cuando no haya internet.
+
+Si se requiere una conexión para la primera visita o instalación, indícalo claramente. No afirmes que funciona offline hasta haber implementado y probado el comportamiento.
+
+# 15. ARQUITECTURA Y CALIDAD
+
+Organiza el código para que sea fácil de mantener.
+
+Separa, como mínimo:
+- Componentes visuales.
+- Datos de los cinco niveles.
+- Estado de la partida.
+- Motor de puntuación.
+- Alternancia de turnos.
+- Gestión de comodines.
+- Persistencia local.
+- Navegación.
+- Configuración de perfiles.
+- Pantalla final y premios.
+
+Crea funciones fiables para:
+- Registrar el resultado de una pregunta.
+- Asignar puntos sin duplicarlos.
+- Marcar una pregunta como utilizada.
+- Saltar una pregunta.
+- Consumir un comodín.
+- Avanzar de nivel.
+- Alternar jugadores.
+- Guardar y restaurar el estado.
+- Resolver el desempate.
+- Iniciar una nueva partida.
+
+Evita errores por pulsar varias veces un botón. Una pregunta no debe sumar puntos más de una vez.
+
+Si una pregunta se pasa, no debe poder marcarse posteriormente como respondida para ganar puntos de manera accidental.
+
+# 16. PRUEBAS OBLIGATORIAS
+
+Antes de dar el proyecto por terminado, comprueba:
+
+1. Los cinco niveles tienen exactamente 20 preguntas cada uno.
+2. Las preguntas coinciden con las listas proporcionadas.
+3. Los niveles 1 y 2 no contienen respuestas correctas precargadas.
+4. Los niveles 3, 4 y 5 otorgan puntos al completar una respuesta.
+5. Las preguntas omitidas no otorgan puntos ni consumen comodines.
+6. Los comodines no permiten salir del nivel actual.
+7. Nunca se consumen más de tres comodines por partida.
+8. Los turnos se alternan correctamente.
+9. Los puntos no se duplican al pulsar varias veces.
+10. El avance anticipado funciona sin asignar puntos a preguntas pendientes.
+11. El avance automático ocurre al completar las 20 preguntas.
+12. Los datos sobreviven a una recarga y al cierre del navegador.
+13. Los perfiles y la portada permanecen disponibles offline.
+14. Una nueva partida no borra datos hasta que se confirme.
+15. El desempate no modifica la puntuación principal.
+16. El catálogo contiene exactamente cuatro premios.
+17. La interfaz se adapta a pantallas pequeñas.
+18. El juego funciona sin sonidos ni llamadas de red innecesarias.
+19. Las imágenes y los datos personales permanecen en el dispositivo.
+20. La experiencia puede jugarse de principio a fin.
+
+# 17. FORMA DE TRABAJO
+
+No te limites a devolver un tutorial.
+
+Construye el proyecto, crea los archivos necesarios y verifica que la aplicación sea ejecutable.
+
+Si estás trabajando en un entorno con vista previa, muestra una versión funcional que pueda probarse.
+
+Si puedes ejecutar pruebas, hazlo y corrige los errores encontrados.
+
+Si no puedes publicar directamente la aplicación, proporciona instrucciones concretas para ejecutarla localmente y publicarla mediante un servicio compatible con PWA. No inventes que la aplicación ya está publicada si no lo está.
+
+Al finalizar, informa:
+- Qué funcionalidades están implementadas.
+- Qué pruebas se realizaron.
+- Cómo iniciar la aplicación.
+- Cómo publicarla mediante un enlace.
+- Cómo verificar que funciona sin conexión.
+- Qué limitaciones reales quedan pendientes.
+
+PRIORIDAD: construir una experiencia funcional, visualmente cuidada, privada, persistente y completamente jugable; no entregar solo una maqueta.
